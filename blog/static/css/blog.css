@@ -1,3 +1,7 @@
+body {
+    font-family: 'Raleway';
+}
+
 .page-header {
     background-color: #ff9400;
     margin-top: 0;
@@ -43,4 +47,10 @@ h1, h2, h3, h4 {
 
 .post h1 a, .post h1 a:visited {
     color: #000000;
+}
+
+p.top-menu, p.top-menu:hover {
+    font-size: 13px;
+    font-family: 'Raleway';
+    text-transform: uppercase;
 }

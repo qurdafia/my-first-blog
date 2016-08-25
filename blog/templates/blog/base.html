@@ -1,21 +1,26 @@
 {% load staticfiles %}
 <html>
     <head>
-        <title>Mormash blog</title>
+        <title>Mormash's Blog</title>
         <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700" rel="stylesheet">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
         <div class="page-header">
-            <h1><a href="/">Mormash Blog</a></h1>
             {% if user.is_authenticated %}
-                <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
+            <p class="top-menu">Hello {{ user.username }}<small> (<a href="{% url 'logout' %}">Log out</a>)</small></p>
+            {% else %}
+            <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
             {% endif %}
+            <h1><a href="{% url 'blog.views.post_list' %}">Mormash's Blog</a></h1>
         </div>
-        <div class="content container">
+        <div class="content">
             <div class="row">
                 <div class="col-md-8">
                 {% block content %}
