@@ -15,7 +15,10 @@ body {
 }
 
 .content {
-    margin-left: 40px;
+    margin: 0;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1, h2, h3, h4 {
@@ -35,14 +38,15 @@ h1, h2, h3, h4 {
 }
 
 .top-menu, .top-menu:hover, .top-menu:visited {
-    color: #ffffff;
+    color: #cccccc;
     float: right;
     font-size: 26pt;
     margin-right: 20px;
 }
 
 .post {
-    margin-bottom: 70px;
+    padding: 20px;
+    border-bottom: 1px dashed #eeeeee;
 }
 
 .post h1 a, .post h1 a:visited {
@@ -53,4 +57,18 @@ p.top-menu, p.top-menu:hover {
     font-size: 13px;
     font-family: 'Raleway';
     text-transform: uppercase;
+}
+
+.auth-area {
+    padding: 10px 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #333333;
+    text-align: right;
+    font-size: 11px;
+}
+
+.edit-but {
+    padding: 20px;
 }
