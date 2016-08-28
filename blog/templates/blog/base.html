@@ -11,8 +11,8 @@
 
     <body>
         <div class="auth-area">
+            <p class="main-logo"><a href="{% url 'blog.views.post_list' %}">the brown stranger</a></p>
             {% if user.is_authenticated %}
-
             <p class="auth-menu">Hello {{ user.username }}<small> (<a href="{% url 'logout' %}">Log out</a>)</small></p>
             {% else %}
             <a href="{% url 'login' %}" class="auth-menu"><span class="glyphicon glyphicon-lock"></span></a>
@@ -21,7 +21,7 @@
 
 
         <div class="page-header">
-            <h1><a href="{% url 'blog.views.post_list' %}">Mormash's Blog</a></h1>
+            <h1><a href="{% url 'blog.views.post_list' %}">&nbsp;</a></h1>
         </div>
 
         <div class="edit-but">

@@ -73,6 +73,17 @@ p.top-menu, p.top-menu:hover {
     z-index: 9999;
 }
 
+p.main-logo {
+    text-align: left;
+    float: left;
+    letter-spacing: 2px;
+    font-weight: lighter;
+}
+
+p.main-logo a {
+    color: #ffffff;
+}
+
 .edit-but {
     padding: 20px;
 }
