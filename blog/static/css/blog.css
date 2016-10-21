@@ -2,6 +2,12 @@ body {
     font-family: 'Raleway';
 }
 
+.wrap {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .page-header {
     background-color: #ff9400;
     margin-top: 0;
@@ -47,11 +53,35 @@ h1, h2, h3, h4 {
 
 .post {
     padding: 20px;
-    border-bottom: 1px dashed #eeeeee;
+    border: 1px solid #cccccc;
+    margin-bottom: 10px;
 }
 
-.post h1 a, .post h1 a:visited {
-    color: #000000;
+@media (min-width: 992px){
+    .col-md-8 {
+        width: 100%;
+    }
+}
+
+@media (min-width: 580px) {
+    .post {
+        margin-right: 10px;
+        display: inline-block;
+        width: 33%;
+        height: 0;
+        padding-bottom: 40%;
+        vertical-align: top;
+    }
+    .post#post-det {
+        width: 100% !important;
+        height: inherit;
+        padding-bottom: 30px;
+    }
+}
+
+
+.post h4 a, .post h4 a:visited {
+    color: #333333;
 }
 
 p.top-menu, p.top-menu:hover {
@@ -86,8 +116,26 @@ p.main-logo a {
 
 .edit-but {
     padding: 20px;
+    height: 100px;
+    border-top: 1px dotted #eeeeee;
+    border-bottom: 1px dotted #eeeeee;
+    margin-bottom: 20px;
 }
 
 .comment {
     margin: 20px 0px 20px 20px;
+}
+
+a#blog-com {
+    border: 1px dotted #ccc;
+    padding: 5px;
+    text-decoration: none;
+    background-color: #eeeeee;
+    color: #333333;
+}
+
+a#blog-com:hover {
+
+    background-color: #cccccc;
+    color: #ffffff;
 }
