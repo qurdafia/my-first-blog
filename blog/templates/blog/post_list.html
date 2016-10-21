@@ -10,7 +10,7 @@
                 {{ post.published_date|date:"m/d/y" }}
             </div>
             <p>{{ post.text|linebreaksbr|truncatewords:20 }}</p>
-            <a id="blog-com" href="{% url 'blog.views.post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
+            <a id="blog-com" href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
 
         </div>
     {% endfor %}
