@@ -180,3 +180,14 @@ a#blog-com:hover {
     background-color: #eeeeee;
     border-top: 1px solid #cccccc;
 }
+
+p#intro {
+    text-align: justify;
+}
+
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin-bottom: 5px;
+}
