@@ -12,7 +12,7 @@
     <body>
         <div class="auth-area">
             <div class="wrap">
-                <p class="main-logo"><a href="{% url 'blog.views.post_list' %}">the brown stranger</a></p>
+                <p class="main-logo"><a href="{% url 'blog.views.post_list' %}">chipining</a></p>
                 {% if user.is_authenticated %}
                 <p class="auth-menu">Hello {{ user.username }}<small> (<a href="{% url 'logout' %}">Log out</a>)</small></p>
                 {% else %}
