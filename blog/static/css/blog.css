@@ -131,6 +131,12 @@ p.main-logo {
 
 p.main-logo a {
     color: #ffffff;
+    font-size: 150%;
+    font-weight: 500;
+}
+
+p.main-logo a:hover {
+    text-decoration: none;
 }
 
 .edit-but {
