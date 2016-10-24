@@ -25,7 +25,7 @@
         <div class="page-header">
             <h1><a href="{% url 'blog.views.post_list' %}">&nbsp;</a></h1>
         </div>
-        <div class="wrap">
+        <div class="wrap-content">
 
             <div class="edit-but">
                 {% if user.is_authenticated %}
@@ -40,11 +40,11 @@
                 <div class="row">
                     <p id="intro">
                         Welcome to Chipining! This is a platform of expression and personal opinion. The contents
-                        of this page may oppose individual views, but differences sometimes beneficial to identify
+                        of this page may oppose someone else's views, but differences sometimes beneficial to identify
                         a common ground. Practice your freedom, widen your view, listen to others perspective,
-                        and <strong>break</strong> the veil of blindness.
+                        and <strong>break</strong> the veil of blindness. (Don't forget to comment.)
                     </p>
-                    <p>Check the latest blogs!</p>
+                    <p id="intro">Check the latest blogs!</p>
                     <p>&nbsp;</p>
                 </div>
                 <div class="row">

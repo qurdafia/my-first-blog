@@ -8,6 +8,13 @@ body {
     margin-right: auto;
 }
 
+.wrap-content {
+    background-color: #f9f7f7;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .page-header {
     background-color: #907249;
     margin-top: 0;
@@ -52,10 +59,11 @@ h1, h2, h3, h4 {
 }
 
 .post {
-    padding: 20px;
+    background-color: #ffffff;
+    padding: 20px 20px 40px 20px;
     /* border: 1px solid #cccccc; */
     box-shadow: 1px 2px 2px 2px #eeeeee;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 
@@ -117,7 +125,7 @@ p.top-menu, p.top-menu:hover {
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 1px;
-    background-color: #333333;
+    background-color: #000000;
     text-align: right;
     font-size: 11px;
     position: fixed;
@@ -183,6 +191,8 @@ a#blog-com:hover {
 
 p#intro {
     text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 input, button, select, textarea {
