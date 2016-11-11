@@ -12,6 +12,7 @@ class Post(models.Model):
     title = models.CharField(max_length=200)
     image = models.ImageField(
         #upload_to='upload_loc',
+        upload_to='/home/mormash/mysite/images',
         blank=True, null=True,
         height_field='height_field',
         width_field='width_field',
