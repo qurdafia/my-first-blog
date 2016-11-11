@@ -1,6 +1,6 @@
 {% extends 'blog/base.html' %}
 
-{% block content %}
+{% block content-det %}
     <h1>New post</h1>
     <form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
         {{ form.as_p }}

@@ -36,17 +36,19 @@
                 <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
                 {% endif %}
             </div>
-            <div class="content">
+            <div class="content2">
                 <div class="row">
                     <p id="intro">
-                        Welcome to Chipining! This is a platform of expression and personal opinion. The contents
-                        of this page may oppose someone else's views, but differences sometimes beneficial to identify
-                        a common ground. Practice your freedom, widen your view, listen to others perspective,
-                        and <strong>break</strong> the veil of blindness. (Don't forget to comment.)
+                        Welcome to Chipining!
                     </p>
-                    <p id="intro">Check the latest blogs!</p>
-                    <p>&nbsp;</p>
+                    <div class="col-md-8">
+                        {% block content-det %}
+                        {% endblock %}
+                        <p>&nbsp;</p>
+                    </div>
                 </div>
+            </div>
+            <div class="content">
                 <div class="row">
                     <div class="col-md-8">
                         {% block content %}
@@ -55,6 +57,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
         <div class="page-footer">
             <p id="copyr">
