@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c584723-7a3c-43b0-8575-af25c08b1546" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="1c584723-7a3c-43b0-8575-af25c08b1546" name="Default" comment="" />
     <ignored path="djangogirls.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,8 +56,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="677" />
-    <option name="y" value="623" />
+    <option name="x" value="564" />
+    <option name="y" value="570" />
     <option name="width" value="1178" />
     <option name="height" value="766" />
   </component>
@@ -279,7 +277,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="677" y="623" width="1178" height="766" extended-state="0" />
+    <frame x="564" y="570" width="1178" height="766" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2255834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
