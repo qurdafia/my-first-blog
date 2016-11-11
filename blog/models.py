@@ -11,7 +11,7 @@ class Post(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=200)
     image = models.ImageField(
-        upload_to='subdirectory/',
+        #upload_to='subdirectory/',
         blank=True, null=True,
         height_field='height_field',
         width_field='width_field',

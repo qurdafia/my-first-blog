@@ -127,8 +127,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static_cdn')
 
 LOGIN_REDIRECT_URL = '/'
 
-
-#MEDIA_ROOT = os.path.join(BASE_DIR, '/home/mormash/my-first-blog/media_cdn')
-MEDIA_ROOT = '/home/mormash/my-first-blog/media_cdn'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media_cdn')
 
 MEDIA_URL = '/media/'
