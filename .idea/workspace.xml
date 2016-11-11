@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c584723-7a3c-43b0-8575-af25c08b1546" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media_cdn/2/Tesla_Roadster_Japanese_display.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media_cdn/Tesla-Model-S-1.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/models.py" afterPath="$PROJECT_DIR$/blog/models.py" />
     </list>
     <ignored path="djangogirls.iws" />
     <ignored path=".idea/workspace.xml" />
