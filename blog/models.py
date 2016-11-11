@@ -3,15 +3,15 @@ from django.utils import timezone
 
 
 
-def upload_loc(post, filename):
-    return "%s/%s" %(post.id, filename)
+#def upload_loc(post, filename):
+    #return "%s/%s" %(post.id, filename)
 
 
 class Post(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=200)
     image = models.ImageField(
-        upload_to=upload_loc,
+        #upload_to='images/',
         blank=True, null=True,
         height_field='height_field',
         width_field='width_field',
