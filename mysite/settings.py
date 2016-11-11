@@ -24,11 +24,11 @@ SECRET_KEY = '&mm78^1%7)eocn3w_7!*t643xy69w0zakk+_-t%=5vonqd*s&w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = True
-#DEBUG = False
+#DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
-#ALLOWED_HOSTS = ['www.chipining.com']
+#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.chipining.com']
 
 # Application definition
 
