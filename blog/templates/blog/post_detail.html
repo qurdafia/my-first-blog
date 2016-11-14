@@ -12,7 +12,8 @@
         <h4>{% block title %}{{ post.title }}{% endblock %}</h4>
         {% if post.published_date %}
         <div class="date">
-            {{ post.published_date|date:"m/d/y" }}
+            by {{ post.author.first_name }} {{ post.author.last_name }}<br />
+            {{ post.published_date|date:"d M, Y" }}
         </div>
         <p>{{ post.text|linebreaksbr }}</p>
 
