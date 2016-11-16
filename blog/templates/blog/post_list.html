@@ -1,4 +1,6 @@
 {% extends 'blog/base.html' %}
+{% load calc %}
+
 
 {% block content %}
     {% for post in posts %}
@@ -14,7 +16,15 @@
                 {{ post.published_date|date:"d M, Y" }}
             </div>
             <p>{{ post.text|linebreaksbr|truncatewords:20 }}</p>
-            <a id="blog-com" href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
+            <a id="blog-com" href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}
+            </a>
+            <br /><br />
+            {% if user.is_authenticated %}
+                <a id="blog-com" href="{% url 'post_detail' pk=post.pk %}">
+                    {{ post.comments.count|sub:post.approved_comments.count }}
+                    new comment{{ post.comments.count|sub:post.approved_comments.count|pluralize }}
+                </a>
+            {% endif %}
 
         </div>
     {% endfor %}
