@@ -2,7 +2,8 @@
 <html>
     <head>
         <title>{% block title %}{% endblock %}</title>
-        <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">
+        <!--link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700" rel="stylesheet"-->
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
@@ -12,9 +13,10 @@
     <body>
         <div class="auth-area">
             <div class="wrap">
-                <p class="main-logo"><a href="{% url 'blog.views.post_list' %}">chipining</a></p>
+                <p class="main-logo"><a href="{% url 'blog.views.post_list' %}">
+                    <img src="http://www.chipining.com/media/chipining_logo.svg" /> chipining</a></p>
                 {% if user.is_authenticated %}
-                <p class="auth-menu">Hello {{ user.username }}<small> (<a href="{% url 'logout' %}">Log out</a>)</small></p>
+                <p class="auth-menu">Hello, {{ user.username }}<small> (<a href="{% url 'logout' %}">Log out</a>)</small></p>
                 {% else %}
                 <a href="{% url 'login' %}" class="auth-menu"><span class="glyphicon glyphicon-lock"></span></a>
                 {% endif %}

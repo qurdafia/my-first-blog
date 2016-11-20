@@ -1,5 +1,5 @@
 body {
-    font-family: 'Raleway';
+    font-family: 'Roboto', sans-serif;
 }
 
 .wrap {
@@ -16,7 +16,7 @@ body {
 }
 
 .page-header {
-    background-color: #907249;
+    background-color: #d96a4f;
     margin-top: 0;
     margin-bottom: 0;
     padding: 20px 20px 20px 40px;
@@ -44,7 +44,8 @@ body {
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Raleway';
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
 }
 
 .date {
@@ -122,12 +123,13 @@ h1, h2, h3, h4 {
 
 
 .post h4 a, .post h4 a:visited {
-    color: #907249;
+    color: #d96a4f;
+    font-weight: 600;
 }
 
 p.top-menu, p.top-menu:hover {
     font-size: 13px;
-    font-family: 'Raleway';
+    font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
 }
 
