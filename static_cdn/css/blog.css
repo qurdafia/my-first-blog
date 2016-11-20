@@ -2,6 +2,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+img#logo {
+    width: 25px;
+}
+
 .wrap {
     max-width: 850px;
     margin-left: auto;
