@@ -1,10 +1,11 @@
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from django.shortcuts import render
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from .models import Post, Comment
-from .forms import PostForm, CommentForm
+from .forms import PostForm, CommentForm, UserRegistrationForm
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
+from django.contrib.auth import login, authenticate
 
 
 # Create your views here.
@@ -105,3 +106,23 @@ def comment_remove(request, pk):
     post_pk = comment.post.pk
     comment.delete()
     return redirect('post_detail', pk=post_pk)
+
+def register_view(request):
+    print(request.user.is_authenticated())
+    title = 'Register'
+    form = UserRegistrationForm(request.POST or None)
+    if form.is_valid():
+        user = form.save(commit=False)
+        password = form.cleaned_data.get('password')
+        user.set_password(password)
+        user.save()
+        new_user = authenticate(username=user.username, password=password)
+        login(request, new_user)
+        return redirect('/')
+
+    context = {
+        'form': form,
+        'title': title,
+    }
+
+    return render(request, 'registration/registration.html', context)
