@@ -6,6 +6,22 @@ img#logo {
     width: 25px;
 }
 
+/* Form Styling */
+
+input#id_username, input#id_password {
+    margin-left: 20px;
+}
+
+input[type="submit"] {
+    margin-top: 10px;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+/* End From Styling */
+
 .wrap {
     max-width: 850px;
     margin-left: auto;
@@ -60,10 +76,6 @@ h1, h2, h3, h4 {
 
 .save {
     float: right;
-}
-
-.post-form textarea, .post-form input {
-    width: 100%;
 }
 
 .top-menu, .top-menu:hover, .top-menu:visited {
