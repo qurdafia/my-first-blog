@@ -81,12 +81,14 @@ def post_remove(request, pk):
     post.delete()
     return redirect('blog.views.post_list')
 
+@login_required
 def add_comment_to_post(request, pk):
     post = get_object_or_404(Post, pk=pk)
     if request.method == "POST":
         form = CommentForm(request.POST)
         if form.is_valid():
             comment = form.save(commit=False)
+            comment.author = request.user
             comment.post = post
             comment.save()
             return redirect('blog.views.post_detail', pk=post.pk)

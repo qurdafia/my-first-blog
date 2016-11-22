@@ -15,7 +15,7 @@ class CommentForm(forms.ModelForm):
 
     class Meta:
         model = Comment
-        fields = ('author', 'text',)
+        fields = ('text',)
 
 class UserRegistrationForm(forms.ModelForm):
     email = forms.EmailField(label='Email address')
