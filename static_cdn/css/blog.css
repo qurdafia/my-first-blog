@@ -10,6 +10,8 @@ img#logo {
 
 input#id_email, input#id_email2, input#id_username, input#id_password {
     margin-left: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 0;
 }
 
 input[type="submit"] {
