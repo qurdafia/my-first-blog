@@ -14,7 +14,20 @@ input#id_email, input#id_email2, input#id_username, input#id_password {
 
 input[type="submit"] {
     margin-top: 10px;
+    background-color: #64bcd0;
+    border-radius: 0;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 80%;
 }
+
+input[type="submit"]:hover {
+    background-color: #49a6bb;
+}
+
 
 .post-form textarea, .post-form input {
     width: 100%;
