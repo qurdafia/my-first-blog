@@ -13,6 +13,7 @@ input#id_email, input#id_email2, input#id_username, input#id_password {
     border: 1px solid #cccccc;
     border-radius: 0;
     box-shadow: none !important;
+    -webkit-appearance: none;
 }
 
 input[type="submit"] {
