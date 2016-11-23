@@ -1,6 +1,9 @@
 {% extends "blog/base.html" %}
 
 {% block content-det %}
+{% if form.errors %}
+    <p>Please provide 'Username' and 'Password'.</p>
+{% endif %}
 
 <form method="post" action="">
     {% csrf_token %}
