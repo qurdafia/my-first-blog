@@ -15,7 +15,7 @@
                 by {{ post.author.username|title }}<br />
                 {{ post.published_date|date:"d M, Y" }}
             </div>
-            <p>{{ post.text|linebreaksbr|truncatewords:20 }}</p>
+            <p>{% block metadesc %}{{block.super}}{{ post.text|linebreaksbr|truncatewords:20 }}{% endblock %}</p>
             <a id="blog-com" href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}
             </a>
             <br /><br />
