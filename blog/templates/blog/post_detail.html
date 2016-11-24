@@ -11,6 +11,8 @@
         {% endif %}
         <h4>{% block title %}{{ post.title }}{% endblock %}</h4>
         {% if post.published_date %}
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <div class="addthis_inline_share_toolbox"></div>
         <div class="date">
             by {{ post.author.username|title }}<br />
             {{ post.published_date|date:"d M, Y" }}
