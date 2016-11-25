@@ -8,12 +8,34 @@ img#logo {
 
 /* Form Styling */
 
+form#user-form {
+    text-align: center;
+    background-color: #ddd;
+    padding: 20px;
+    max-width: 399px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 2px 2px #ccc;
+
+}
+
+form table {
+    background-color: transparent;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
 input#id_email, input#id_email2, input#id_username, input#id_password {
-    margin-left: 20px;
+    /*margin-left: 20px;*/
     border: 1px solid #cccccc;
     border-radius: 0;
     box-shadow: none !important;
     -webkit-appearance: none;
+    width: 100%;
 }
 
 
@@ -22,7 +44,26 @@ textarea#id_text, input#id_title {
     border-radius: 0;
     box-shadow: none !important;
     -webkit-appearance: none;
+    width: 100%;
 }
+
+
+input[type="submit"]#user-btn {
+    margin-top: 30px;
+    background-color: #64bcd0;
+    background-image: none;
+    border-radius: 0;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
 
 
 
@@ -37,6 +78,7 @@ input[type="submit"], a.btn.btn-default, button.save.btn.btn-default {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 80%;
+
 }
 
 input[type="submit"]:hover {

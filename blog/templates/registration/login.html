@@ -6,7 +6,7 @@
 <p>Your username and password didn't match. Please try again.</p>
 {% endif %}
 
-<form method="post" action="{% url 'login' %}">
+<form id="user-form" method="post" action="{% url 'login' %}">
 {% csrf_token %}
 <table>
 <tr>
@@ -24,8 +24,8 @@
 </tr>
 </table>
 
-<input type="submit" value="login" />
-<input type="hidden" name="next" value="{{ next }}" />
+<input id="user-btn" type="submit" value="login" />
+<input id="user-btn" type="hidden" name="next" value="{{ next }}" />
 </form>
 
 {% endblock %}
