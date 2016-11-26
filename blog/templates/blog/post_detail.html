@@ -18,7 +18,7 @@
             by {{ post.author.username|title }}<br />
             {{ post.published_date|date:"d M, Y" }}
         </div>
-        <p>{{ post.text|linebreaksbr }}</p>
+        <p>{{ post.text|linebreaksbr|urlize }}</p>
 
         {% else %}
             {% if user.is_authenticated and post.author == user %}
@@ -29,11 +29,7 @@
     <hr>
     <a class="btn btn-default" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
     {% for comment in post.comments.all %}
-<<<<<<< HEAD
     {% if user.is_authenticated and post.author == user or comment.approved_comment %}
-=======
-    {% if user.is_authenticated  and post.author == user or comment.approved_comment %}
->>>>>>> ba519689ebd45fd8bceca84a9dd60bd8e128ec65
     <div class="comment">
         <div class="date">
             {% if not comment.approved_comment %}
@@ -44,6 +40,7 @@
         From: <strong>{{ comment.author.username|title }}</strong> |
         <small>{{ comment.created_date }}</small>
         <p>{{ comment.text|linebreaks }}</p>
+        <hr />
     </div>
     {% endif %}
     {% empty %}
