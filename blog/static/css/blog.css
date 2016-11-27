@@ -45,7 +45,7 @@ table tr td#label-form-login label {
     font-size: 12px;
 }
 
-input#id_email, input#id_email2, input#id_username, input#id_password {
+input#id_email, input#id_email2, input#id_username, input#id_password, input#search {
     /*margin-left: 20px;*/
     border: none;
     border-radius: 0;

@@ -4,14 +4,23 @@ from django.utils import timezone
 from .models import Post, Comment
 from .forms import PostForm, CommentForm, UserRegistrationForm
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, Http404, HttpResponse
 from django.contrib.auth import login, authenticate
+from django.db.models import Q
 
 
 # Create your views here.
 
 def post_list(request):
     posts_list = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+
+    search = request.GET.get("q")
+    if search:
+        posts_list = posts_list.filter(
+            Q(title__icontains=search)|
+            Q(text__icontains=search)|
+            Q(author__username__icontains=search)
+        ).distinct()
 
     paginator = Paginator(posts_list, 4)  # Show 25 contacts per page
 
@@ -48,6 +57,8 @@ def post_new(request):
 @login_required
 def post_edit(request, pk):
     post = get_object_or_404(Post, pk=pk)
+    if not request.user == post.author:
+        raise Http404
     if request.method == "POST":
         form = PostForm(request.POST or None, request.FILES or None, instance=post)
         if form.is_valid():
@@ -78,6 +89,8 @@ def publish(self):
 @login_required
 def post_remove(request, pk):
     post = get_object_or_404(Post, pk=pk)
+    if not request.user == post.author:
+        raise Http404
     post.delete()
     return redirect('blog.views.post_list')
 
@@ -99,12 +112,16 @@ def add_comment_to_post(request, pk):
 @login_required
 def comment_approve(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
+    if request.user != comment.post.author:
+        raise Http404
     comment.approve()
     return redirect('post_detail', pk=comment.post.pk)
 
 @login_required
 def comment_remove(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
+    if request.user != comment.post.author:
+        raise Http404
     post_pk = comment.post.pk
     comment.delete()
     return redirect('post_detail', pk=post_pk)

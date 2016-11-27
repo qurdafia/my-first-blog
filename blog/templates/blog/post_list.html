@@ -1,8 +1,15 @@
 {% extends 'blog/base.html' %}
 {% load calc %}
 
-
+{% block content-det %}
+    <form method="GET" action="">
+        <input id="search" name="q" type="text" placeholder="Search posts" value="{{ request.GET.q }}" />
+        <input type="submit" value="Search" />
+    </form>
+{% endblock %}
 {% block content %}
+
+
     {% for post in posts %}
         <div class="post">
             {% if post.image %}
@@ -25,8 +32,9 @@
                     new comment{{ post.comments.count|sub:post.approved_comments.count|pluralize }}
                 </a>
             {% endif %}
-
         </div>
+        {% empty %}
+                <p>No results.</p>
     {% endfor %}
 {% endblock %}
 {% block pagination %}
