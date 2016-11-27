@@ -2,7 +2,7 @@
 {% load calc %}
 
 {% block content-det %}
-    <form method="GET" action="">
+    <form id="user-form" method="GET" action="">
         <input id="search" name="q" type="text" placeholder="Search posts" value="{{ request.GET.q }}" />
         <input type="submit" value="Search" />
     </form>
