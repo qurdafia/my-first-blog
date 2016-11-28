@@ -38,7 +38,9 @@
                 <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
 
                 {% else %}
-                <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
+                <div id="create-home-wrap">
+                    <a href="{% url 'login' %}" class="top-menu-create"><span id="create-home" class="glyphicon glyphicon-plus">&nbsp;Create Post</span></a>
+                </div>
                 {% endif %}
             </div>
             <div class="content2">
