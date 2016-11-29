@@ -19,6 +19,8 @@ class PostForm(forms.ModelForm):
             if image._size > 2621440:
                 raise ValidationError("Image file too large exceeds 2.5MB")
             return image
+        elif image == None:
+            return image
         else:
             raise ValidationError("Couldn't read uploaded image")
 
