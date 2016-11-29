@@ -153,6 +153,16 @@ input[type="submit"]:hover {
 
 /* End From Styling */
 
+
+/* Error */
+
+ul.errorlist li {
+    list-style-type: none;
+    color: red;
+}
+
+/* End Error */
+
 .wrap {
     max-width: 850px;
     margin-left: auto;

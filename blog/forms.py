@@ -2,6 +2,8 @@
 from django import forms
 from .models import Post, Comment
 from django.contrib.auth import get_user_model
+from django.core.exceptions import ValidationError
+
 User = get_user_model()
 
 
@@ -11,16 +13,28 @@ class PostForm(forms.ModelForm):
         model = Post
         fields = ('image', 'title', 'text', )
 
+    def clean_image(self):
+        image = self.cleaned_data.get('image', False)
+        if image:
+            if image._size > 2621440:
+                raise ValidationError("Image file too large exceeds 2.5MB")
+            return image
+        else:
+            raise ValidationError("Couldn't read uploaded image")
+
+
 class CommentForm(forms.ModelForm):
 
     class Meta:
         model = Comment
         fields = ('text',)
 
+
 class UserRegistrationForm(forms.ModelForm):
     email = forms.EmailField(label='Email address')
     email2 = forms.EmailField(label='Confirm email')
     password = forms.CharField(widget=forms.PasswordInput)
+
     class Meta:
         model = User
         fields = (
