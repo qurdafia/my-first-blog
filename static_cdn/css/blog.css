@@ -186,6 +186,12 @@ ul.errorlist li {
     margin-right: auto;
 }
 
+.wrap-content2 {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .page-header {
     background-color: #d96a4f;
     margin-top: 0;
@@ -361,15 +367,21 @@ a#blog-com:hover {
 
 
 .page-footer {
-    text-align: center;
     text-transform: uppercase;
     font-size: 70%;
-    letter-spacing: 2px;
-    padding: 20px;
+    letter-spacing: 1px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
     background-color: #eeeeee;
     border-top: 1px solid #cccccc;
 }
 
+.page-footer a {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #333333;
+}
 p#intro {
     text-align: justify;
     /*padding-left: 20px;*/
@@ -382,3 +394,9 @@ input, button, select, textarea {
     line-height: inherit;
     margin-bottom: 5px;
 }
+
+/* GlYPS */
+.glyphicon.glyphicon-earphone {
+    font-size: 18px;
+}
+/* GLYPS */
