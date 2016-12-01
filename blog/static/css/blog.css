@@ -369,9 +369,9 @@ a#blog-com:hover {
 .page-footer {
     height: 100%;
     text-transform: uppercase;
-    font-size: 80%;
-    letter-spacing: 2px;
-    padding: 20px;
+    font-size: 70%;
+    letter-spacing: 1px;
+    padding: 50px 0 50px 0;
     background-color: #eeeeee;
     border-top: 1px solid #cccccc;
 }
