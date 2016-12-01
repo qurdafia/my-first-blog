@@ -4,6 +4,7 @@ myvenv
 db.sqlite3
 /static
 mysite/settings.py
+mysite/sk.py
 static_cdn
 media_cdn
 .DS_Store
